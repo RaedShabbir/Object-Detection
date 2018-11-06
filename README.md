@@ -9,7 +9,7 @@ Implemented Algorithms:
 
 Sample Output:
 
-'''
+```
 YoloV3
 ----------------------------------------------------------
 SUMMARY
@@ -23,7 +23,8 @@ Detection (11 images)    : 2.493
 Drawing Boxes            : 0.473
 Average time_per_img     : 0.227
 ----------------------------------------------------------
+```
+
+![Alt text](detections/000000012670_yolov3.jpg)
 ![Alt text](detections/000000002006_yolov3.jpg)
 ![Alt text](detections/000000001000_yolov3.jpg)
-![Alt text](detections/000000012670_yolov3.jpg)
-'''
