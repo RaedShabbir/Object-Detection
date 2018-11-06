@@ -23,8 +23,8 @@ def arg_parse():
     parser.add_argument("--images", dest = 'images', help =
                         "Image / Directory containing images to perform detection upon",
                         default = "data/image/samples", type = str)
-    arser.add_argument("--video", dest = 'images', help =
-                        "Image / Directory containing images to perform detection upon",
+    parser.add_argument("--video", dest = 'video', help =
+                        "Video / Directory containing videos to perform detection upon",
                         default = "data/video/samples", type = str)
     parser.add_argument("--det", dest = 'det', help =
                         "Image / Directory to store detections to",
@@ -291,12 +291,12 @@ def print_summary(time_stash, imlist):
     print("{:25s}: {:2.3f}".format("Loading batch", time_stash['end_batch_create'] - time_stash['start_batch_create']))
     print("{:25s}: {:2.3f}".format("Detection (" + str(len(imlist)) +  " images)", time_stash['end_det_loop'] - time_stash['start_det_loop']))
     print("{:25s}: {:2.3f}".format("Drawing Boxes",  time_stash['end_box_draw'] -  time_stash['start_box_draw']))
-    print("{:25s}: {:2.3f}".format("Average time_per_img",(time_stash['end_det_loop'] - time_stash['start_det_loop']/len(imlist))))
+    print("{:25s}: {:2.3f}".format("Average time_per_img",(time_stash['end_det_loop'] - time_stash['start_det_loop'])/len(imlist)))
     print("----------------------------------------------------------")
 
-IMAGE_MODE = False
-VIDEO_MODE = True
-Live = True
+IMAGE_MODE = True
+VIDEO_MODE = False
+Live = False
 
 if IMAGE_MODE:
     time_stash = {}
@@ -381,7 +381,7 @@ elif VIDEO_MODE:
                 colors = pkl.load(open(PALETTE_PATH, "rb"))
 
 
-                frame =  draw_frame_boxes(output, frame):
+                frame =  draw_frame_boxes(output, frame)
 
                 #show dets
                 cv2.imshow("frame", frame)
