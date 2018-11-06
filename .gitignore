@@ -1,0 +1,4 @@
+**configs\weights\yolov3.weights
+**configs\weights\vgg16.pth
+*.weights
+*.pth
