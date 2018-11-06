@@ -9,7 +9,8 @@ Implemented Algorithms:
 
 Sample Output:
 
-YOLOV3
+'''
+YoloV3
 ----------------------------------------------------------
 SUMMARY
 ----------------------------------------------------------
@@ -25,4 +26,4 @@ Average time_per_img     : 0.227
 ![Alt text](detections/000000002006_yolov3.jpg)
 ![Alt text](detections/000000001000_yolov3.jpg)
 ![Alt text](detections/000000012670_yolov3.jpg)
-
+'''
